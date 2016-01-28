@@ -2,5 +2,9 @@ hi thanks
 
 what a dick
 
+<<<<<<< HEAD
 
 what a dick again
+=======
+fuck you too dick.
+>>>>>>> origin/master
