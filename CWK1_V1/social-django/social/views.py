@@ -17,6 +17,7 @@ def loggedin(f):
             return HttpResponse(template.render(context))
     return test
 
+#Takes user to index page and request the app name
 def index(request):
     template = loader.get_template('social/index.html')
     context = RequestContext(request, {
@@ -24,6 +25,7 @@ def index(request):
     	})
     return HttpResponse(template.render(context))
 
+#Takes the user to the signup page
 def signup(request):
     template = loader.get_template('social/signup.html')
     context = RequestContext(request, {
@@ -31,6 +33,7 @@ def signup(request):
     	})
     return HttpResponse(template.render(context))
 
+#When user clicks register, it requests the user and password and saves it to the database and then display the user registered page. 
 def register(request):
     u = request.POST['user']
     p = request.POST['pass']
@@ -43,6 +46,7 @@ def register(request):
         })
     return HttpResponse(template.render(context))
 
+#
 def login(request):
     if 'username' not in request.POST:
         template = loader.get_template('social/login.html')
